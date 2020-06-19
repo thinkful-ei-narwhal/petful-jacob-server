@@ -36,7 +36,6 @@ class Queue {
     if (node === this.last) {
       this.last = null
     }
-    console.log(node.value)
 
     return node.value
   }
