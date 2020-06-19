@@ -15,6 +15,7 @@ store.dogs.forEach(dog => pets.dogs.enqueue(dog))
 // --------------------
 module.exports = {
   refresh(type) {
+    console.log('refresh', type)
     switch(type) {
       case 'cat': 
         store.cats.forEach(cat => pets.cats.enqueue(cat))
@@ -25,7 +26,6 @@ module.exports = {
         break;
     }
   },
-
   getCats() {
     // Return the pets next in line to be adopted.
     if(pets.cats.last === null) {
