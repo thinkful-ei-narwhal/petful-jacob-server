@@ -1,10 +1,10 @@
 const express = require('express')
 const cors = require('cors')
-
+const config = require('../../config')
 const app = express()
 
 app.use(cors({
-    origin: CLIENT_ORIGIN
+    origin: config.CLIENT_ORIGIN
 }))
 
 app.use('/people', require('../people/people.router'))
