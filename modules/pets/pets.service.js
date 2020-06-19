@@ -29,14 +29,14 @@ module.exports = {
   getCats() {
     // Return the pets next in line to be adopted.
     if(pets.cats.last === null) {
-      refresh('cat')
+      this.refresh('cat')
     }
 
     return pets.cats.show()
   },
   getDogs() {
     if(pets.dogs.last === null) {
-      refresh('dog')
+      this.refresh('dog')
     }
     return pets.dogs.show()
   },
